@@ -4,3 +4,16 @@ author: "Karan Garg"
 date: "31/03/2021"
 output: html_document
 ---
+
+```{r}
+ # Libraries
+library(tidyverse) li
+```
+
+```{r}
+# Examining situation in USA
+covid_us <- covid19("USA", level = 2)
+ggplot(covid_us, aes(x = date , y = confirmed)) + geom_line() +
+facet_wrap(~id)
+```
+
